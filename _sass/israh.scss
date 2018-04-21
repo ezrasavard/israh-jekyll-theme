@@ -13,8 +13,6 @@ body {
   color: $normal-color;
   -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: 100%;
-  padding: 0px;
-  margin: 0px;
 }
 
 .topbar {
@@ -25,7 +23,7 @@ body {
     width: 35%;
     height: 90px;
     position: absolute;
-    float: left;
+    z-index: 1;
     top: 0px;
     left: 0px;
     border-left: 2px solid $dark-color;
@@ -38,7 +36,7 @@ body {
     width: 12%;
     height: 40px;
     position: absolute;
-    float: right;
+    z-index: 1;
     bottom: 0px;
     right: 0px;
     border-right: 1px solid $dark-color;
@@ -54,33 +52,69 @@ body {
     @media (max-width: $column-width-trigger) {max-height: 0;}
   }
   .title-box {
+    position: relative;
+    z-index: 2;
     width: $column-width;
-    margin: 10px auto;
+    margin-top: 32px;
+    margin-bottom: 0px;
+    margin-left: auto;
+    margin-right: auto;
     @media (max-width: $column-width-trigger) {
       width: auto;
       padding-left: $column-padding;
       padding-right: $column-padding;
     }
   }
+  nav {
+    position: relative;
+    z-index: 2;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    margin-top: 24px;
+    margin-bottom: 80px;
+    font-size: 20px;
+    text-align: center;
+    @media (max-width: $column-width-trigger) {
+      max-width: 100%;
+      padding-left: $column-padding + 20px;
+      padding-right: $column-padding + 20px;
+    }
+  }
+  .navlink {
+    color: $dark-color;
+    &:hover,
+    &:focus, {
+      border-bottom: 1px solid $dark-color;
+    }
+  }
   h1 {
     color: $dark-color;
     font-family: 'Raleway', Arial, sans-serif;
-    margin-top: 32px;
-    margin-bottom: 12px;
-    padding-top: 16px;
-    padding-left: 16px;
+    padding-top: 24px;
+    padding-left: 24px;
+    padding-right: 24px;
     font-size: 64px;
     line-height: 56px;
-    width: 90%;
   }
   h2 {
     color: $light-color;
+    font-family: 'Oswald', sans-serif;
     font-size: 30px;
-    padding-top: 0px;
-    margin-top: 24px;
+    margin-top: 48px;
     text-align: center;
     margin-left: 30px;
     margin-right: 30px;
+  }
+}
+
+/* Main Column */
+main {
+  width: $column-width;
+  margin: 10px auto;
+  @media (max-width: $column-width-trigger) {
+    width: auto;
+    padding-left: $column-padding;
+    padding-right: $column-padding;
   }
 }
 
@@ -88,8 +122,7 @@ body {
   h1 {
     color: $dark-color;
     font-family: 'Raleway', Arial, sans-serif;
-    margin: 20px 0px 0px;
-    padding: 0px 0px 6px 0px;
+    margin-top: 20px;
     font-size: 36px;
     line-height: 32px;
   }
@@ -102,90 +135,51 @@ body {
   }
 }
 
+.snippet {
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+
 h1 {
   color: $dark-color;
   font-family: 'Raleway', Arial, sans-serif;
-  margin: 18px 0px 12px;
-  padding: 6px 0px 6px 0px;
-  font-size: 48px;
-  line-height: 42px;
+  font-size: 30px;
+  // line-height: 32px;
+  margin-top: 32px;
+  margin-bottom: 18px;
 }
 
-nav {
-  background: inherit;
-  padding-top: 24px;
-  padding-bottom: 16px;
-  margin-top: 24px;
-  margin-bottom: 80px;
-  font-size: 20px;
-  text-align: center;
-  @media (max-width: $column-width-trigger) {
-    max-width: 100%;
-    padding-left: $column-padding;
-    padding-right: $column-padding;
-  }
-}
-
-.navlink {
-  color: $dark-color;
-  &:hover,
-  &:focus, {
-    border-bottom: 1px solid $dark-color;
-  }
-}
-
-.group:after { // the "clearfix hack" in a minimal form
-  content: "";
-  display: table;
-  clear: both;
-}
-
-.divider {
-  margin: 90px 40px;
+h2 {
+  font-family: 'Oswald', sans-serif;
+  color: $light-color;
+  font-size: 24px;
+  margin-top: 32px;
+  margin-bottom: 18px;
 }
 
 footer {
-  margin: 30px 0 10px;
-  padding-top: 20px;
+  margin-top: 100px;
+  margin-bottom: 10px;
   text-align: center;
   color: $light-color;
-}
-
-h2, .pagination {
-  font-family: 'Raleway', Arial, sans-serif;
-  color: $normal-color;
-  margin: 10px 0px 6px;
-  font-size: 18px;
+  p {
+    margin-top: 90px;
+    margin-bottom: 40px;
+  }
 }
 
 .pagination {
+  margin-top: 100px;
   text-align: center;
+  font-size: 20px;
+  span {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
 }
 
 p {
     margin-bottom: 15px;
-}
-
-/* Main Block */
-main {
-  width: $column-width;
-  margin: 10px auto;
-  @media (max-width: $column-width-trigger) {
-    width: auto;
-    padding-left: $column-padding;
-    padding-right: $column-padding;
-  }
-}
-
-h1.date {
-  font-family: 'Oswald', sans-serif;
-  color: $light-color;
-  font-size: 24px;
-  margin-top: 4px;
-  margin-bottom: 16px;
-  padding-bottom: 2px;
-  text-align: right;
-  border-bottom: 1px solid $light-color
 }
 
 a {
@@ -210,34 +204,6 @@ img, iframe {
   -moz-box-shadow: rgba(0,0,0,0.3) 0 1px 3px;
   box-shadow: rgba(0, 0, 0, 0.3) 0 1px 3px;
   display: block;
-}
-
-.snippet {
-  margin-top: 60px;
-  margin-bottom: 60px;
-}
-
-.image-box {
-  position: relative;
-  background: inherit;
-  overflow: hidden;
-  img { // fill the box
-    width: 100%;
-  }
-}
-
-.lineno { 
-  background: $bg-color;
-  color: $light-color; 
-  display: inline-block; 
-  padding: 0 5px; 
-  border-right:1px solid #ccc;
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
 }
 
 ul, ol {

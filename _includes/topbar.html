@@ -1,13 +1,16 @@
 <div class="topbar", "group">
     <div class=title-box>
-        <div class=top-left-graphics-box></div>
-        <a class=navlink href="{{ site.baseurl }}/"><h1>{{ site.greeting }}</h1></a>
+        <a class=navlink href="{{ site.baseurl }}/"><h1>{{ site.greeting }}</h1></a>        
     </div>
-    <div class=vanishing-box>
-        <h2>{{ site.description }}</h2>
-    </div>
-    <div class=bottom-right-graphics-box></div>    
+    <div class=top-left-graphics-box></div>
+    {% if page.title == "Home" %}
+        <div class=vanishing-box>
+            <h2>{{ site.description }}</h2>
+        </div>
+    {% endif %}
     {% include navbar.html %}
+    <div class=bottom-right-graphics-box></div>    
+    
 </div>
 
 

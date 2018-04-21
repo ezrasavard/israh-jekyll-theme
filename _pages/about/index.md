@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: page
 title: About
 permalink: "/about/"
 top-text: This Title is All Title-y
