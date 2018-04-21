@@ -6,16 +6,21 @@ title: Home
 {% assign tmp = "/" | append: site.baseurl %}
 {% if page.url == tmp or page.url == "/" %}
     <article>
-        <p> Israh is a responsive Jekyll theme with a clean single column layout and not much else.</p>
-        <p>This theme is an evolution of my [Ezora jekyll theme](https://github.com/ezrasavard/ezora-jekyll-theme) that reflects my own changing tastes. Most notably, Israh takes the focus off of header images so I don't have to find them for posts that don't need them.</p>
-        <p>Like Ezora, Israh uses a fairly minimal set of layouts and sass, and will automatically conform to a sensible layout based on the YAML provided, unless a layout is specified. Width/height values are all defined in the top of main.scss as variables, so you don't have to hunt too far through the SCSS to tweak things.</p>
-        <p>Notable _includes are the **topbar**, included in the default layout, the **navbar** and the **postlist**, which is a paginated pile of posts you can include in any page, like the default home page does. You can specify your navigation menu links in **navbar** if you don't like it generating them for all your pages, GitHub and LinkedIn accounts. You can also add more social accounts if you like by extending the list in navbar.html.</p>
-
+        <p>Israh is a responsive Jekyll theme with a clean single column layout and not much else.</p>
+        <p>This theme is an evolution of my <a href=https://github.com/ezrasavard/ezora-jekyll-theme>Ezora jekyll theme</a>
+            that reflects my own changing tastes. Most notably, Israh takes the focus off of header images so I don't have to find 
+            them for posts that don't need them.</p>
+        <p>Like Ezora, Israh uses a fairly minimal set of layouts and sass, and will automatically conform to a sensible layout 
+            based on the YAML provided, unless a layout is specified. Width/height values are all defined in the top of main.scss 
+            as variables, so you don't have to hunt too far through the SCSS to tweak things.</p>
+        <p>Notable includes are the <i>topbar</i>, included in the default layout and the <i>postlist</i>, 
+            which is a paginated pile of posts you can include in any page, like the default home page does. 
+            You can specify your navigation menu links in navbar if you don't like it generating them for all your pages, 
+            GitHub and LinkedIn accounts. You can also add more social accounts if you like by extending the list in navbar.html.</p>
     </article>
     <div class="divider"></div>
-    <h1 class="top-text">Most Recent Posts</h1>
-    {% include postlist.html %}
+{% include postlist.html %}
 {% else %}
-    <h1 class="top-text">More Posts</h1>
+    <h1 class="title">More Posts</h1>
     {% include postlist.html %}
 {% endif %}

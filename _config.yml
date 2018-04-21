@@ -1,8 +1,8 @@
 title: Israh Theme
 email: git@ezrasavard.com
-greeting: Welcome to the Israh Sample Site
+greeting: Israh Theme Demo
 description: > # this means to ignore newlines until another tag
-    Israh is a responsive Jekyll theme with a clean single column layout and not much else.
+    Israh is a responsive Jekyll theme with a clean single column layout and not much else
 github:  ezrasavard
 linkedin: ezrasavard
 favicon: favicon.png

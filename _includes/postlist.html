@@ -1,16 +1,20 @@
 <!-- This loops through the paginated posts -->
 {% for post in paginator.posts %}
 <div class="snippet">
+  <div class="posttitle">
     <a href="{{ post.url | prepend: site.baseurl }}">
-        <h1 class="title">{{ post.title }}</h1><br>
-        <h1 class="tagline">{{ post.date | date_to_string }}</h1>
+        <h1>{{ post.title }}</h1>
+        <div class=datebox>
+          <h2><span>{{ post.date | date_to_string }}</span></h2>
+        </div>
     </a>
         
     {% if post.excerpt %}
         <p>{{ post.excerpt }}</p>
-        <a href="{{ post.url | prepend: site.baseurl }}"><p style="text-align:center">Read More</p></a>
+        <p style="text-align:center"><a href="{{ post.url | prepend: site.baseurl }}"><span>&bull; &bull; &bull;</span></a></p>
     {% endif %}
-    </div>
+  </div>
+</div>
 {% endfor %}
 
 <!-- Pagination links -->

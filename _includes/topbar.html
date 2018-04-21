@@ -1,21 +1,10 @@
 <div class="topbar", "group">
-    {% if page.title != "Home" %}
-        <h1 class="title">{{ page.title }}</h1>
-    {% else %}
-        <h1 class="title">{{ site.greeting }}</h1><br>
-    {% endif %}
-    {% if page.tagline %}
-        <h1 class="tagline">{{ page.tagline }}</h1>
-    {% endif %}
-    
-    <div class="mobile-topbar">
-        {% if page.title != "Home" %}
-            <h1 class="title">{{ page.title }}</h1><br>
-        {% else %}
-            <h1 class="title">{{ site.greeting }}</h1><br>
-        {% endif %}
+    <div class=title-box>
+        <a class=navlink href="{{ site.baseurl }}/"><h1>{{ site.greeting }}</h1></a>
     </div>
-    
+    <div class=vanishing-box>
+        <h2>{{ site.description }}</h2>
+    </div>
     {% include navbar.html %}
 </div>
 

@@ -6,21 +6,12 @@
 	<head>
 	    {% include head.html %}
 	</head>
-
 	<body>
 		{% include topbar.html %}
-		
 		<main>
-			{% if page.top-text %}
-    			<h1 class="top-text">{{ page.top-text }}</h1>
-			{% endif %}
-			
 			{{ content }}
-	    	
 			{% include footer.html %}
-			
 		</main>
-		
 	</body>
 </html>
 

@@ -17,21 +17,69 @@ body {
   margin: 0px;
 }
 
-.group:after { // the "clearfix hack" in a minimal form
-  content: "";
-  display: table;
-  clear: both;
+.topbar {
+  margin: 0px auto 20px;
+  max-width: $column_width;
+  .vanishing-box {
+    transition-duration: .5s;
+    max-height: 500px;
+    overflow: hidden;
+    @media (max-width: $column-width-trigger) {max-height: 0;}
+  }
+  .title-box {
+    width: $column-width;
+    margin: 10px auto;
+    @media (max-width: $column-width-trigger) {
+      width: auto;
+      padding-left: $column-padding;
+      padding-right: $column-padding;
+    }
+  }
+  h1 {
+    color: $dark-color;
+    font-family: 'Raleway', Arial, sans-serif;
+    margin: 32px 0px 12px;
+    padding: 6px 4px 6px 4px;
+    font-size: 64px;
+    line-height: 56px;
+    padding-right: 10%;  
+  }
+  h2 {
+    color: $light-color;
+    font-size: 30px;
+    padding-left: 60px;
+    padding-top: 0px;
+    margin-top: 24px;
+    text-align: center;
+  }
 }
 
-.divider {
-  margin: 32px 32px;
-}
-
-footer {
-  margin: 30px 0 10px;
-  padding-top: 20px;
-  text-align: center;
-  color: $light-color;
+.posttitle {
+  h1 {
+    color: $dark-color;
+    font-family: 'Raleway', Arial, sans-serif;
+    margin: 20px 0px 0px;
+    padding: 0px 0px 6px 0px;
+    font-size: 48px;
+    line-height: 56px;
+  }
+  h2 {
+    font-family: 'Oswald', sans-serif;
+    color: $light-color;
+    font-size: 26px;
+    margin-top: 8px;
+    margin-bottom: 24px;
+    // padding-bottom: 4px;
+    // padding-left: 12px;    
+    // text-align: right;
+  }
+  .datebox {
+    width: auto;
+    // float: right;
+    // span {
+      // border-bottom: 1px solid $light-color;
+    // }
+  }
 }
 
 h1 {
@@ -39,23 +87,57 @@ h1 {
   font-family: 'Raleway', Arial, sans-serif;
   margin: 18px 0px 12px;
   padding: 6px 0px 6px 0px;
-  font-size: 42px;
-  line-height: 38px;
+  font-size: 48px;
+  line-height: 42px;
 }
 
-.top-text {
+.title {
+  color: $dark-color;
+  font-family: 'Raleway', Arial, sans-serif;
+  margin: 18px 0px 0px;
+  padding: 6px 0px 6px 0px;
+  font-size: 48px;
+  line-height: 42px;
+  padding-right: 10%;
+}
+
+nav {
+  background: inherit;
+  padding: 24px 0px 6px;
+  margin-top: 24px;
+  margin-bottom: 80px;
+  font-size: 20px;
   text-align: center;
-  font-size: 28px;
-  margin-bottom: 18px;
-  margin-top: 30px;
+  @media (max-width: $column-width-trigger) {
+    max-width: 100%;
+    padding-left: .5*$column-padding;
+    padding-right: .5*$column-padding;
+  }
 }
 
-.date {
-    //font-family: Monaco, "Courier New", monospace;
-    font-family: 'Oswald', sans-serif;
-    color: $normal-color;
-    margin: 6px 0px 15px;
-    font-size: 18px;
+.navlink {
+  color: $dark-color;
+  &:hover,
+  &:focus, {
+    border-bottom: 1px solid $dark-color;
+  }
+}
+
+.group:after { // the "clearfix hack" in a minimal form
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.divider {
+  margin: 90px 40px;
+}
+
+footer {
+  margin: 30px 0 10px;
+  padding-top: 20px;
+  text-align: center;
+  color: $light-color;
 }
 
 h2, .pagination {
@@ -69,13 +151,12 @@ h2, .pagination {
   text-align: center;
 }
 
-
 p {
     margin-bottom: 15px;
 }
 
 /* Main Block */
-main {
+main, .title-box {
   width: $column-width;
   margin: 10px auto;
   @media (max-width: $column-width-trigger) {
@@ -83,73 +164,54 @@ main {
     padding-left: $column-padding;
     padding-right: $column-padding;
   }
-  img, iframe {
-    margin: 25px auto;
-    max-width: 100%;
-    // nice fade-y box shadow
-    border: 1px solid;
-    border-color: #e5e5e5 #dbdbdb #d2d2d2;
-    -webkit-border-radius: 4px;
-    -moz-border-radius: 4px;
-    border-radius: 4px;
-    -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0 1px 3px;
-    -moz-box-shadow: rgba(0,0,0,0.3) 0 1px 3px;
-    box-shadow: rgba(0, 0, 0, 0.3) 0 1px 3px;
-    display: block;
-  }
-  a {
-    color: $highlight-color;
-    text-decoration: none;
-    &:hover,
-    &:focus, {
-      border-bottom: 1px dashed #555;
-    }
+}
+
+h1.date {
+  font-family: 'Oswald', sans-serif;
+  color: $light-color;
+  font-size: 24px;
+  margin-top: 4px;
+  margin-bottom: 16px;
+  padding-bottom: 2px;
+  text-align: right;
+  border-bottom: 1px solid $light-color
+}
+
+h2.date {
+  font-family: 'Oswald', sans-serif;
+  color: $light-color;
+  font-size: 28px;
+  padding-top: 0px;
+  margin-top: 4px;
+}
+
+a {
+  color: $light-color;
+  text-decoration: none;
+  &:hover,
+  &:focus, {
+    border-bottom: 1px solid $light-color;
   }
 }
 
-.topbar {
-  font-family: 'Raleway', Arial, sans-serif;
-  background: $bg-color;
-  margin: 0px auto 20px;
-  max-width: $column_width;
-  h1 {
-    margin-bottom: 4px;
-  }
-  a {
-    color: $dark-color;
-    text-decoration: none;
-    &:hover,
-    &:focus, {
-      color: $normal-color;
-      border: none;
-    }
-  }
+img, iframe {
+  margin: 25px auto;
+  max-width: 100%;
+  // nice fade-y box shadow
+  border: 1px solid;
+  border-color: #e5e5e5 #dbdbdb #d2d2d2;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0 1px 3px;
+  -moz-box-shadow: rgba(0,0,0,0.3) 0 1px 3px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0 1px 3px;
+  display: block;
 }
 
 .snippet {
-  padding-bottom: 40px;
-}
-
-.mobile-topbar {
-  display: none;
-  background: inherit;
-  text-align: center;
-  h1 {
-    color: $dark-color;
-    padding-top: 8px;
-    display: inline-block;
-  }
-  @media (max-width: $column-width-trigger) {
-    display: block;
-  }
-}
-
-.tagline {
-  color: $light-color;
-  font-size: 30px;
-  padding-left: 60px;
-  padding-top: 0px;
-  margin-top: 4px;
+  margin-top: 60px;
+  margin-bottom: 60px;
 }
 
 .image-box {
@@ -159,21 +221,6 @@ main {
   img { // fill the box
     width: 100%;
   }
-}
-
-nav {
-  background: inherit;
-  padding: 6px 0px 6px;
-  margin-bottom: 30px;
-  font-size: 18px;
-  text-align: center;
-  @media (max-width: $column-width-trigger) {
-    max-width: 100%;
-  }
-}
-
-.separator {
-    color: $light-color;
 }
 
 .lineno { 
@@ -203,7 +250,6 @@ table {
   margin: auto;
   padding-bottom: 14px;
 }
-
 
 a.footnote:before {   
  content: "[";
