@@ -1,11 +1,14 @@
 ---
 layout: default
-title: Sample
-tagline: It must be bunnies
-permalink: "/sample/"
-cover: /media/spike.jpg
-top-text: This Text is all Title-y
+title: About
+permalink: "/about/"
+top-text: This Title is All Title-y
 ---
+
+Israh is a responsive Jekyll theme with a clean single column layout and not much else. This theme is an evolution of my [Ezora jekyll theme](https://github.com/ezrasavard/ezora-jekyll-theme) that reflects my own changing tastes. Most notably, Israh takes the focus off of header images so I don't have to find them for posts that don't need them.
+
+Like Ezora, Israh uses a fairly minimal set of layouts and sass, and will automatically conform to a sensible layout based on the YAML provided, unless a layout is specified. Width/height values are all defined in the top of main.scss as variables, so you don't have to hunt too far through the SCSS to tweak things.
+Notable includes are the _topbar_, included in the default layout and the _postlist_, which is a paginated pile of posts you can include in any page, like the default home page does. You can specify your navigation menu links in navbar if you don't like it generating them for all your pages, GitHub and LinkedIn accounts. You can also add more social accounts if you like by extending the list in navbar.html.
 
 I saw their production of 'Giselle' in 1890. I wept like a baby, and I was evil! Boy, when they were handing out school spirit, you didn't even stand in line, did you?
 

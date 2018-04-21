@@ -4,14 +4,12 @@
   <div class="posttitle">
     <a href="{{ post.url | prepend: site.baseurl }}">
         <h1>{{ post.title }}</h1>
-        <div class=datebox>
-          <h2><span>{{ post.date | date_to_string }}</span></h2>
-        </div>
+        <h2><span>{{ post.date | date_to_string }}</span></h2>
     </a>
         
     {% if post.excerpt %}
         <p>{{ post.excerpt }}</p>
-        <p style="text-align:center"><a href="{{ post.url | prepend: site.baseurl }}"><span>&bull; &bull; &bull;</span></a></p>
+        <p style="text-align:center"><a href="{{ post.url | prepend: site.baseurl }}"><span>-more-</span></a></p>
     {% endif %}
   </div>
 </div>
