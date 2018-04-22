@@ -1,7 +1,15 @@
 .topbar {
-    margin: 0px auto 20px;
     max-width: $column_width;
     position: relative;
+    margin-top: 0px;
+    margin-bottom: 80px;
+    margin-left: auto;
+    margin-right: auto;
+    @media (max-width: $column-width-trigger) {
+      width: auto;
+      padding-left: $column-padding;
+      padding-right: $column-padding;
+    }
     .top-left-graphics-box {
       width: 35%;
       height: 90px;
@@ -28,22 +36,15 @@
         right: $column-padding;
       }
     }
-    .title-box {
-      position: relative;
-      z-index: 2;
-      width: $column-width;
-      margin-top: 32px;
-      margin-bottom: 0px;
-      margin-left: auto;
-      margin-right: auto;
+    .topbar-contents {
       padding-top: 24px;
       padding-left: 24px;
       padding-right: 24px;
-      @media (max-width: $column-width-trigger) {
-        width: auto;
-        padding-left: $column-padding + 24px;
-        padding-right: $column-padding + 24px;
-      }
+      padding-bottom: 24px;
+    }
+    .title-box {
+      position: relative;
+      z-index: 2;
     }
     .title {
       &:hover,
@@ -59,29 +60,26 @@
       transition-duration: .5s;
       max-height: 500px;
       overflow: hidden;
-      @media (max-width: $column-width-trigger) {max-height: 0;}
+      padding-left: 12px;
+      padding-right: 12px;
+      @media (max-width: $column-width-trigger) {
+        max-height: 0;
+        margin-top: 0;
+        margin-bottom: 0;
+      }
       color: $light-color;
       font-family: $page-subtitle-font;
       font-size: 30px;
       margin-top: 48px;
+      margin-bottom: 48px;
       text-align: center;
-      margin-left: 30px;
-      margin-right: 30px;
     }
     nav {
       position: relative;
       z-index: 2;
-      padding-top: 24px;
-      padding-bottom: 24px;
-      margin-top: 24px;
-      margin-bottom: 80px;
+      margin-top: 48px;
       font-size: 20px;
       text-align: center;
-      @media (max-width: $column-width-trigger) {
-        max-width: 100%;
-        padding-left: $column-padding + 20px;
-        padding-right: $column-padding + 20px;
-      }
     }
     .navlink {
       color: $dark-color;

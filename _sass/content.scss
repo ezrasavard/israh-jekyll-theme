@@ -13,6 +13,9 @@ body {
 main {
   width: $column-width;
   margin: 10px auto;
+
+  padding-left: $column-padding;
+  padding-right: $column-padding;
   @media (max-width: $column-width-trigger) {
     width: auto;
     padding-left: $column-padding;

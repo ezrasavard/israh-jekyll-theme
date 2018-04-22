@@ -1,16 +1,10 @@
-<div class="topbar", "group">
-    <div class=title-box>
-        <a class=title href="{{ site.baseurl }}/">{{ site.greeting }}</a>
-    </div>
-    <div class=top-left-graphics-box></div>
-    {% if page.show-subtitle == true %}
-        <div class=subtitle-box>
-            {{ site.description }}
-        </div>
-    {% endif %}
-
-    <nav>
-        <span>
+<div class=topbar>
+    <div class=topbar-contents>
+        <div class=title-box><a class=title href="{{ site.baseurl }}/">{{ site.greeting }}</a></div>
+        {% if page.show-subtitle == true %}
+            <div class=subtitle-box>{{ site.description }}</div>
+        {% endif %}
+        <nav>
             {% for x in site.navlinks %}
                 {% if forloop.first == false %}
                     <span>&bull;</span>
@@ -21,7 +15,8 @@
                     <a class=navlink href="{{ x.url }}">{{ x.text }}</a>
                 {% endif %}
             {% endfor %}
-        </span>
-    </nav>
-    <div class=bottom-right-graphics-box></div>    
+        </nav>
+    </div>
+    <div class=top-left-graphics-box></div>
+    <div class=bottom-right-graphics-box></div>
 </div>
