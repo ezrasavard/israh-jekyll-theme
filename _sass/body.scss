@@ -26,31 +26,6 @@ main {
   }
 }
 
-.posttitle {
-  h1 {
-    color: $dark-color;
-    font-family: $title-font;
-    margin-top: 20px;
-    font-size: 36px;
-    line-height: 32px;
-    font-weight: 400;
-  }
-  h2 {
-    font-family: $subtitle-font;
-    color: $light-color;
-    font-size: 24px;
-    margin-top: 8px;
-    margin-bottom: 24px;
-    font-weight: 400;
-
-  }
-}
-
-.snippet {
-  margin-top: 60px;
-  margin-bottom: 60px;
-}
-
 h1 {
   color: $dark-color;
   font-family: $title-font;
@@ -76,16 +51,6 @@ footer {
   p {
     margin-top: 90px;
     margin-bottom: 40px;
-  }
-}
-
-.pagination {
-  margin-top: 100px;
-  text-align: center;
-  font-size: 20px;
-  span {
-    padding-left: 8px;
-    padding-right: 8px;
   }
 }
 
@@ -118,9 +83,18 @@ img, iframe {
 }
 
 ul, ol {
-    list-style-position: inside;
-    padding-bottom: 12px;
+  -webkit-margin-before: 0px;
+  -webkit-margin-after: 0px;
+  -webkit-margin-start: 0px;
+  -webkit-margin-end: 0px;
+  -webkit-padding-start: 0px;
+  padding-bottom: 12px;
+  list-style-position: inside;
 }
+
+// li {
+  // display: inline;
+// }
 
 td {
   padding-right: 8px;
@@ -129,6 +103,10 @@ td {
 table {
   margin: auto;
   padding-bottom: 14px;
+}
+
+.footnotes {
+  margin: inherit;
 }
 
 a.footnote:before {   

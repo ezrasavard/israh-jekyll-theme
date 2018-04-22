@@ -1,0 +1,38 @@
+
+
+.posttitle {
+  h1 {
+    color: $dark-color;
+    font-family: $title-font;
+    margin-top: 20px;
+    font-size: 36px;
+    line-height: 32px;
+    font-weight: 400;
+  }
+  h2 {
+    font-family: $subtitle-font;
+    color: $light-color;
+    font-size: 24px;
+    margin-top: 8px;
+    margin-bottom: 24px;
+    font-weight: 400;
+  }
+}
+
+.snippet {
+  margin-top: 60px;
+  margin-bottom: 60px;
+  .footnotes, a.footnote {
+    display: none;
+  }
+}
+
+.pagination {
+  margin-top: 100px;
+  text-align: center;
+  font-size: 20px;
+  span {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+}
