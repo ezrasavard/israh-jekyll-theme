@@ -1,10 +1,13 @@
 /* Syntax highlighting */
 
-.highlight {
-  
+code {
+  font-family: monospace;
+}
+
+pre {
+  font-family: monospace;
   overflow: auto;
-  margin: 40px 0;
-  background: $bg-color;
+  margin-top: 40px;
   border: 1px solid;
   border-color: #e5e5e5 #dbdbdb #d2d2d2;
   -webkit-border-radius: 4px;
@@ -14,6 +17,10 @@
   -moz-box-shadow: rgba(0,0,0,0.3) 0 1px 3px;
   box-shadow: rgba(0, 0, 0, 0.3) 0 1px 3px;
   display: block;
+}
+
+.highlight {
+
   .c {
     color: #998;
     font-style: italic;

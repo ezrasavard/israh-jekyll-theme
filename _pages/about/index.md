@@ -47,9 +47,8 @@ Let's say you have text that you want to refer with a footnote, you can do that 
 
 ## Blockquote
 
+With some text above it:
 > Start by doing what's necessary; then do what's possible; and suddenly you are doing the impossible. --Francis of Assisi
-
-**NOTE:** This theme does NOT support nested blockquotes.
 
 <div class="divider"></div>
 

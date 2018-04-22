@@ -6,24 +6,23 @@ show-subtitle: true
 
 <!-- This loops through the paginated posts -->
 {% for post in paginator.posts %}
-<div class="snippet">
-    <div class="posttitle">
+  <div class=snippet>
+    <div class=title-box>
         <a href="{{ post.url | prepend: site.baseurl }}">
-            <h1>{{ post.title }}</h1>
-            <h2><span>{{ post.date | date_to_string }}</span></h2>
+          <div class=title>{{ post.title }}</div>
+          <div class=date>{{ post.date | date_to_string }}</div>
         </a>
     </div>
-        
     {% if post.excerpt %}
-        <p>{{ post.excerpt }}</p>
-        <p style="text-align:center"><a href="{{ post.url | prepend: site.baseurl }}"><span>- Read more -</span></a></p>
+      <div class=excerpt>{{ post.excerpt }}</div>
+      <div class=more><a href="{{ post.url | prepend: site.baseurl }}"></a>- Read more -</a></div>
     {% endif %}
-</div>
+  </div>
 {% endfor %}
 
 <!-- Pagination links -->
 {% if paginator.total_pages > 1 %}
-<div class="pagination">
+<div class=pagination>
   {% if paginator.previous_page %}
     <span><a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo;</a></span>
   {% else %}

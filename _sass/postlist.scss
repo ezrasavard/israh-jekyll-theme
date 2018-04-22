@@ -1,7 +1,11 @@
-
-
-.posttitle {
-  h1 {
+.snippet {
+  margin-top: 60px;
+  margin-bottom: 60px;
+  .title {
+    &:hover,
+    &:focus, {
+      border-bottom: none;
+    }
     color: $dark-color;
     font-family: $title-font;
     margin-top: 20px;
@@ -9,28 +13,26 @@
     line-height: 32px;
     font-weight: 400;
   }
-  h2 {
+  .date {
     font-family: $subtitle-font;
     color: $light-color;
     font-size: 24px;
-    margin-top: 8px;
+    margin-top: 12px;
     margin-bottom: 24px;
     font-weight: 400;
   }
-}
-
-.snippet {
-  margin-top: 60px;
-  margin-bottom: 60px;
+  .more {
+    text-align: center;
+    margin-top: 32px;
+  }
   .footnotes, a.footnote {
     display: none;
   }
 }
-
 .pagination {
   margin-top: 100px;
   text-align: center;
-  font-size: 20px;
+  font-size: 18px;
   span {
     padding-left: 8px;
     padding-right: 8px;
