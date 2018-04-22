@@ -3,9 +3,24 @@ email: git@ezrasavard.com
 greeting: Israh Theme Demo
 description: > # this means to ignore newlines until another tag
     Israh is a responsive Jekyll theme with a clean single column layout and not much else
-github:  ezrasavard
-linkedin: ezrasavard
 favicon: favicon.png
+navlinks:
+    -
+        text: Home
+        url: /
+        internal: True
+    -
+        text: The Theme
+        url: /theme
+        internal: True
+    -
+        text: Github
+        url: https://www.github.com/ezrasavard
+        internal: False
+    -
+        text: LinkedIn
+        url: https://www.linkedin.com/in/ezrasavard
+        internal: False
 
 # Build settings
 paginate: 3
@@ -21,9 +36,6 @@ excerpt_separator: "<!--more-->"
 sass:
     sass_dir: _sass
     style: compressed
-
-# cover images are expected to be 900px by 240px, or at least 15:4 aspect ratio
-# thumbnails look best with 3:1 or 5:2 ratios in this layout.
 defaults:
     -
         scope:
@@ -36,7 +48,6 @@ defaults:
             type: "posts"
         values:
             author: "Ezra Savard"
-            cover: "/media/header.jpg"
             layout: "post"
     -
         scope:
@@ -44,5 +55,9 @@ defaults:
             type: "pages"
         values:
             author: "Ezra Savard"
-            cover: "/media/header.jpg"
-            layout: "default"
+            layout: "page"
+    -
+        scope:
+            path: ""
+        values:
+            show-subtitle: false

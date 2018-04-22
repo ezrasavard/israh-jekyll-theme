@@ -3,7 +3,7 @@
         <a class=navlink href="{{ site.baseurl }}/"><h1>{{ site.greeting }}</h1></a>        
     </div>
     <div class=top-left-graphics-box></div>
-    {% if page.title == "Home" %}
+    {% if page.show-subtitle == true %}
         <div class=vanishing-box>
             <h2>{{ site.description }}</h2>
         </div>
@@ -11,27 +11,18 @@
 
     <nav>
         <span>
-            <a class=navlink href="{{ site.baseurl }}/">Home</a>
-            <span>&bull;</span>            
-            {% for pages in site.pages %}
-                {% if pages.title != "Home" %}
-                    {% if forloop.first == False %}
-                        <span>&bull;</span>            
-                    {% endif %}
-                    <a class=navlink href="{{ site.baseurl }}{{ pages.permalink }}">{{ pages.title }}</a>
+            {% for x in site.navlinks %}
+                {% if forloop.first == false %}
+                    <span>&bull;</span>
+                {% endif %}
+                {% if x.internal == true %}
+                    <a class=navlink href="{{ site.baseurl }}{{ x.url }}">{{ x.text }}</a>
+                {% else %}
+                    <a class=navlink href="{{ x.url }}">{{ x.text }}</a>
                 {% endif %}
             {% endfor %}
-            {% if site.github %}
-                <span>&bull;</span>
-                <a class=navlink href="https://www.github.com/{{ site.github }}">GitHub</a>
-            {% endif %}
-            {% if site.linkedin %}
-                <span>&bull;</span>
-                <a class=navlink href="https://www.linkedin.com/in/{{ site.linkedin }}">LinkedIn</a>
-            {% endif %}
         </span>
     </nav>
-
     <div class=bottom-right-graphics-box></div>    
 </div>
 
