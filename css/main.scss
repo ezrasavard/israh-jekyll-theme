@@ -12,8 +12,6 @@ $dark-color: #2a2a2a;
 
 /* Background colors */
 $bg-color: #efefef;
-$bg-color-dark-backup: rgb(0,0,0);
-$bg-color-dark: rgba(0,0,0,.75);
 
 /* Dimensions */
 $column-width: 600px;
@@ -41,6 +39,6 @@ $page-subtitle-font: $subtitle-font;
 $body-font: 'Open Sans', sans-serif;
 
 @import "topbar";
-@import "postlist";
-@import "body";
+@import "snippets";
+@import "content";
 @import "syntax";

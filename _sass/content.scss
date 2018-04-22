@@ -81,15 +81,6 @@ img, iframe {
   display: block;
 }
 
-td {
-  padding-right: 8px;
-}
-
-table {
-  margin: auto;
-  padding-bottom: 14px;
-}
-
 a.footnote:before {   
  content: "[";
 }
@@ -99,12 +90,34 @@ a.footnote:after {
 }
 
 blockquote {
-  line-height: 22px;
   border-left: 2px solid $dark-color;
-  margin: 1.5em 10px;
-  padding: 0.5em 10px;
+  padding-left: 24px;
+  margin-left: 12px;
   quotes: "\201C""\201D""\2018""\2019";
-  p {
-    margin-bottom: 5px;
+}
+
+code, pre {
+  font-family: monospace;
+}
+
+pre {
+  overflow: auto;
+  border-left: 2px solid $dark-color;
+  padding-left: 24px;
+  margin: 32px 12px;
+}
+
+table {
+  table-layout: auto;
+  margin: 24px auto;
+  border-collapse: collapse;
+  th {
+    text-align: left;
+    padding: 8px 10px;
+    border-bottom: 1px solid $dark-color;
+  }
+  td {
+    padding: 4px 8px;
+    border-top: 1px dashed $dark-color;
   }
 }
