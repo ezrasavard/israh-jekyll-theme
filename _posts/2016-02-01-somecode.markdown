@@ -1,8 +1,6 @@
 ---
 title:  Coding and Hipster Ipsum
 date:   2016-02-01
-cover:  /media/simblee_cover.jpg
-thumb:  /media/simblee_thumb.jpg
 
 ---
 

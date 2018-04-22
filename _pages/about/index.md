@@ -1,8 +1,8 @@
 ---
 layout: page
-title: About
-permalink: "/about/"
-top-text: This Title is All Title-y
+title: The Theme
+permalink: "/theme/"
+top-text: Markdown Stylesheet Demo Thing
 ---
 
 Israh is a responsive Jekyll theme with a clean single column layout and not much else. This theme is an evolution of my [Ezora jekyll theme](https://github.com/ezrasavard/ezora-jekyll-theme) that reflects my own changing tastes. Most notably, Israh takes the focus off of header images so I don't have to find them for posts that don't need them.
@@ -10,21 +10,125 @@ Israh is a responsive Jekyll theme with a clean single column layout and not muc
 Like Ezora, Israh uses a fairly minimal set of layouts and sass, and will automatically conform to a sensible layout based on the YAML provided, unless a layout is specified. Width/height values are all defined in the top of main.scss as variables, so you don't have to hunt too far through the SCSS to tweak things.
 Notable includes are the _topbar_, included in the default layout and the _postlist_, which is a paginated pile of posts you can include in any page, like the default home page does. You can specify your navigation menu links in navbar if you don't like it generating them for all your pages, GitHub and LinkedIn accounts. You can also add more social accounts if you like by extending the list in navbar.html.
 
-I saw their production of 'Giselle' in 1890. I wept like a baby, and I was evil! Boy, when they were handing out school spirit, you didn't even stand in line, did you?
+This page is mostly a copy of [the one from "The Plain" Jekyll Theme](https://github.com/heiswayi/the-plain).
 
-Bonnie and Clyde, they wanted fame, notoriety, and boy did they get it. They also got dead. Anyone in this much pain prays, or at least curses. Okay, uh, I'm lost. I'm angry. And I'm armed. So we'll integrate non-progressional evolution theory with God's creation of Eden. Stay with me. Forever. That's the whole point. I don't think Buffy's going to be too broken up over a pylon. I, Anya, promise to love you, to cherish you, to honor you, but not to obey you, of course, because that's anachronistic and misogynistic and who do you think you are, like a sea captain or something? I'm a comfortador also. Anya! How is your money?
+<!--more--->
 
-You could, uh, could have, like, a world without [shrimp](https://en.wikipedia.org/wiki/Shrimp), or with, you know, nothing but shrimp. They're a little bit bison. You can't take the sky from me. And what's with all the carrots? Why not default them with ninja skills or whatever? Eyeballs to entrails, my sweet.
+**NOTE:** This markdown cheatsheet is a typography demo for this theme. Check out this post to learn more about this markdown usage when you want to get started with this theme. Enjoy!
 
-The human body can be drained of blood in 8.6 seconds given adequate vacuuming systems. I suppose there is a sort of Machiavellian ingenuity to your transgression. Magic's all balderdash and chicanery. It's my estimation that every man ever got a statue made of him was one kind of sommbitch or another. A whole mess of sparrows turning on a dime, salmon trucking upstream. You shut the hell up right now or so help me, I'll shut you up. The human mind is like Van Halen; if you just pull out one piece and keep replacing it, it just degenerates. And that'd be where you find stored such things as empathy, compassion, an aversion to disemboweling puppies. Now I'm just a big, fluffy [puppy](https://en.wikipedia.org/wiki/Puppy) with bad teeth.
+## Typography Elements in One
 
-I like to think of myself more as a 'guest-age'. Hey, no, we'll just set course for Planet of the Lonely, Rich, and Appropriately Hygienic Man.
-Now you can luxuriate in a nice jail cell, but if your hand touches metal, I swear by my pretty floral bonnet: I will end you. And what's with all the [carrots](https://en.wikipedia.org/wiki/Carrot)?
+Let's start with a informative paragraph. **This text is bolded.** But not this one! _How about italic text?_ Cool right? Ok, let's **_combine_** them together. Yeah, that's right! I have code to highlight, so `ThisIsMyCode()`. What a nice! Good people will hyperlink away, so [here we go](#) or [http://www.example.com](http://www.example.com).
 
-<!-- please do not remove this line -->
 
-<div style='display:none;'>
-<a href='http://www.commercekitchen.com'>ipsum generator</a>
-</div>
+<div class="divider"></div>
 
-<!-- end whedon ipsum code -->
+## Headings H1 to H6
+
+# H1 Heading
+
+## H2 Heading
+
+### H3 Heading
+
+#### H4 Heading
+
+##### H5 Heading
+
+###### H6 Heading
+
+<div class="divider"></div>
+
+## Footnote
+
+Let's say you have text that you want to refer with a footnote, you can do that too! This is an example for the footnote number one [^1]. You can even add more footnotes, with link! [^2]
+
+<div class="divider"></div>
+
+## Blockquote
+
+> Start by doing what's necessary; then do what's possible; and suddenly you are doing the impossible. --Francis of Assisi
+
+**NOTE:** This theme does NOT support nested blockquotes.
+
+<div class="divider"></div>
+
+## List Items
+
+1. First order list item
+2. Second item
+
+* Unordered list can use asterisks
+- Or minuses
++ Or pluses
+
+<div class="divider"></div>
+
+## Code Blocks
+
+```javascript
+var s = "JavaScript syntax highlighting";
+alert(s);
+```
+
+```python
+s = "Python syntax highlighting"
+print s
+```
+
+```
+No language indicated, so no syntax highlighting.
+But let's throw in a <b>tag</b>.
+```
+
+<div class="divider"></div>
+
+## Table
+
+### Table 1: With Alignment
+
+| Tables        | Are           | Cool  |
+| ------------- |:-------------:| -----:|
+| col 3 is      | right-aligned | $1600 |
+| col 2 is      | centered      |   $12 |
+| zebra stripes | are neat      |    $1 |
+
+### Table 2: With Typography Elements
+
+Markdown | Less | Pretty
+--- | --- | ---
+*Still* | `renders` | **nicely**
+1 | 2 | 3
+
+<div class="divider"></div>
+
+## Horizontal Line
+
+The HTML `<hr>` element is for creating a "thematic break" between paragraph-level elements. In markdown, you can create a `<hr>` with any of the following:
+
+* `___`: three consecutive underscores
+* `---`: three consecutive dashes
+* `***`: three consecutive asterisks
+
+renders to:
+
+___
+
+---
+
+***
+
+<div class="divider"></div>
+
+## Media
+
+### YouTube Embedded Iframe
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/n1a7o44WxNo" frameborder="0" allowfullscreen></iframe>
+
+### Image
+
+![Minion](http://octodex.github.com/images/minion.png)
+
+[^1]: Footnote number one yeah baby! Long sentence test of footnote to see how the words are wrapping between each other. Might overflowww!
+[^2]: A footnote you can link to - [click here!](#)

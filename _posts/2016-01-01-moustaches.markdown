@@ -1,8 +1,6 @@
 ---
 title:  Moustaches!
 date:   2016-01-01
-cover:  /media/moustache.png
-tagline: Instead of a date on the image, you can have one of these!
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.

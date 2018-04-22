@@ -1,8 +1,6 @@
 ---
 title:  A Spicy Bacon Ipsum
 date:   2016-03-01
-cover:  /media/bacon_cover.png
-thumb:  /media/bacon_thumb.jpg
 ---
 
 Spicy jalapeno bacon ipsum dolor amet fatback biltong cow dolor lorem, magna tongue sirloin andouille. Mollit leberkas ham jerky non capicola, do pariatur ham hock magna. Chicken boudin irure, laboris pork flank spare ribs. Deserunt fugiat pig labore, pariatur reprehenderit excepteur in nulla.

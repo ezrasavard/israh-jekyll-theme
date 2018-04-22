@@ -1,10 +1,7 @@
 ---
 title:  A Cheese Filled Post
 date:   2016-04-01
-cover:  /media/cheese.jpg
 ---
-
-Thumnails can be generated from the cover image if one isn't provided in the post YAML, but it isn't necessary going to be optimal looking.
 
 Cheese on toast goat stilton. Cheese and wine fondue cow fromage frais who moved my cheese cut the cheese halloumi melted cheese. Cheese slices hard cheese ricotta lancashire the big cheese pepper jack cheeseburger cut the cheese. Queso cut the cheese cheese slices edam the big cheese bavarian bergkase melted cheese.
 
