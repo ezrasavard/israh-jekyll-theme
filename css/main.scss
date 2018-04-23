@@ -2,7 +2,7 @@
 # Front matter comment to ensure Jekyll properly reads file.
 ---
 
-@import url('https://fonts.googleapis.com/css?family=Aldrich|Basic|Cabin+Condensed|Candal|Carter+One|Fredericka+the+Great|Racing+Sans+One|Squada+One|Viga');
+@import url('https://fonts.googleapis.com/css?family=Racing+Sans+One');
 
 /* Text colors */
 $lightest-color: #cccccc;
@@ -20,20 +20,11 @@ $column-width-trigger: $column-width + 2*$column-padding;
 
 // $title-font: 'Raleway', Arial, sans-serif;
 // $subtitle-font: 'Oswald', sans-serif;
-
-// font-family: 'Aldrich', sans-serif;
-// font-family: 'Basic', sans-serif;
-// font-family: 'Viga', sans-serif;
-// font-family: 'Carter One', cursive;
-// font-family: 'Squada One', cursive;
-// font-family: 'Candal', sans-serif;
-// font-family: 'Squada One', cursive;
-// font-family: 'Fredericka the Great', cursive;
 // font-family: 'Racing Sans One', cursive;
 
 /* Fonts */
-$title-font: 'Raleway', Arial, sans-serif;
-$subtitle-font: $title-font;
+$title-font: 'Oswald', sans-serif;
+$subtitle-font: 'Open Sans', sans-serif;
 $page-title-font: $title-font;
 $page-subtitle-font: $subtitle-font;
 $body-font: 'Open Sans', sans-serif;
