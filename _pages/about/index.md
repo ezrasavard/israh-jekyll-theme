@@ -123,7 +123,7 @@ ___
 
 ### YouTube Embedded Iframe
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/n1a7o44WxNo" frameborder="0" allowfullscreen></iframe>
+<div class="video"><iframe src="https://www.youtube.com/embed/n1a7o44WxNo" frameborder="0" allowfullscreen></iframe></div>
 
 ### Image
 
