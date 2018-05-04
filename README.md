@@ -11,11 +11,11 @@ Feel free to use this theme however you like (MIT License).
 
 ## Screenshots
 
-### Desktop
-![screenshot-desktop](https://github.com/ezrasavard/israh-jekyll-theme/blob/master/screenshot.png)
+### Home
+![screenshot-home](https://github.com/ezrasavard/israh-jekyll-theme/blob/master/screenshot-home.png)
 
-### Mobile
-![screenshot-mobile](https://github.com/ezrasavard/israh-jekyll-theme/blob/master/screenshot-mobile.png)
+### Other Page
+![screenshot-page](https://github.com/ezrasavard/israh-jekyll-theme/blob/master/screenshot-page.png)
 
 ## Installation
 
