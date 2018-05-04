@@ -2,8 +2,6 @@
 # Front matter comment to ensure Jekyll properly reads file.
 ---
 
-@import url('https://fonts.googleapis.com/css?family=Racing+Sans+One');
-
 /* Text colors */
 $lightest-color: #cccccc;
 $light-color: #aaaaaa;
@@ -17,10 +15,6 @@ $bg-color: #efefef;
 $column-width: 600px;
 $column-padding: 30px;
 $column-width-trigger: $column-width + 2*$column-padding;
-
-// $title-font: 'Raleway', Arial, sans-serif;
-// $subtitle-font: 'Oswald', sans-serif;
-// font-family: 'Racing Sans One', cursive;
 
 /* Fonts */
 $title-font: 'Oswald', sans-serif;
