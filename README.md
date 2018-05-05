@@ -28,7 +28,7 @@ Some people may prefer to just fork this repository and add their own content, t
 
 ## Usage
 
-Like Ezora, Israh uses a fairly minimal set of layouts and sass, and will automatically conform to a sensible layout based on the YAML provided, unless a layout is specified. Width/height values are all defined in the top of css/main.scss as variables, so you don't have to hunt too far through the SCSS to tweak things.
+Like Ezora, Israh uses a fairly minimal set of layouts and sass. Width/height values are all defined in the top of css/main.scss as variables, so you don't have to hunt too far through the SCSS to tweak things.
 
 The navigation menu is generated from the list of links in _config.yml.
 

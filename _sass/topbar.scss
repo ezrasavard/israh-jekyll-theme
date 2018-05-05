@@ -59,13 +59,13 @@
     .subtitle-box {
       transition-duration: .5s;
       max-height: 500px;
-      overflow: hidden;
       padding-left: 12px;
       padding-right: 12px;
       @media (max-width: $column-width-trigger) {
         max-height: 0;
         margin-top: 0;
         margin-bottom: 0;
+        overflow: hidden;
       }
       color: $light-color;
       font-family: $page-subtitle-font;
