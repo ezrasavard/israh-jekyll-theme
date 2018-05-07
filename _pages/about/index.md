@@ -1,8 +1,7 @@
 ---
 layout: page
-title: The Theme
+title: Markdown Stylesheet Demo Thing Also With a Very Long Page Title
 permalink: "/theme/"
-top-text: Markdown Stylesheet Demo Thing
 ---
 
 Israh is a responsive Jekyll theme with a clean single column layout and not much else. This theme is an evolution of my [Ezora jekyll theme](https://github.com/ezrasavard/ezora-jekyll-theme) that reflects my own changing tastes. Most notably, Israh takes the focus off of header images so I don't have to find them for posts that don't need them.
@@ -79,6 +78,84 @@ print s
 No language indicated, so no syntax highlighting.
 But let's throw in a <b>tag</b>.
 ```
+
+Code with line numbers:
+
+{% highlight C  linenos %}
+#define PWM16_MAX_VAL 65535
+const int led = 2; // the on-board LED pin, configured as output in other code
+
+//configure timer2 for 16 bit PWM usage
+void timer_config() {
+
+  NRF_TIMER2-&gt;TASKS_STOP = 1;
+  NRF_TIMER2-&gt;MODE = TIMER_MODE_MODE_Timer;
+  NRF_TIMER2-&gt;BITMODE = TIMER_BITMODE_BITMODE_16Bit;
+  NRF_TIMER2-&gt;PRESCALER = 1; // divide frequency down by 2^x
+  NRF_TIMER2-&gt;TASKS_CLEAR = 1; // Clear timer
+  NRF_TIMER2-&gt;INTENSET |= TIMER_INTENSET_COMPARE0_Enabled &lt;&lt; TIMER_INTENSET_COMPARE0_Pos;
+  NRF_TIMER2-&gt;INTENSET |= TIMER_INTENSET_COMPARE1_Enabled &lt;&lt; TIMER_INTENSET_COMPARE1_Pos;
+  NRF_TIMER2-&gt;CC[0] = PWM16_MAX_VAL; // this is related to a bug fix, see "my_isr()" comments
+  NRF_TIMER2-&gt;CC[1] = 0;
+  NRF_TIMER2-&gt;EVENTS_COMPARE[0] = 0;
+  NRF_TIMER2-&gt;EVENTS_COMPARE[1] = 0;
+  dynamic_attachInterrupt(TIMER2_IRQn, my_isr);
+}
+{% endhighlight %}
+
+The ISR:
+
+{% highlight C  linenos %}
+
+void my_isr(void) {
+
+ if (NRF_TIMER2-&gt;EVENTS_COMPARE[0] != 0) {
+   NRF_TIMER2-&gt;EVENTS_COMPARE[0] = 0;
+   digitalWrite(led, HIGH);
+ }
+ else if (NRF_TIMER2-&gt;EVENTS_COMPARE[1] != 0) {
+   NRF_TIMER2-&gt;EVENTS_COMPARE[1] = 0;
+   digitalWrite(led, LOW);
+ }
+}
+
+{% endhighlight %}
+
+The function to call:
+
+{% highlight C  linenos %}
+
+void pwm16(uint16_t value) {
+
+  NRF_TIMER2-&gt;TASKS_STOP = 1;
+  NRF_TIMER2-&gt;EVENTS_COMPARE[0] = 0;
+ 
+  if (value == 0) {
+    digitalWrite(led, LOW);
+  }
+  else if (value == PWM16_MAX_VAL) {
+    digitalWrite(led, HIGH);
+  }
+  else {
+    NRF_TIMER2-&gt;CC[0] = PWM16_MAX_VAL - value;
+    NRF_TIMER2-&gt;TASKS_START = 1;
+  }
+}
+{% endhighlight %}
+
+## Render some LaTeX with KaTeX
+
+$$
+T_{SA} = B_{SA}e^{\frac{E}{k_bT}}
+$$
+
+$$
+T_{QMC} = B_{QMC}e^{\alpha_D}
+$$
+
+$$
+T_{QA} = B_{QA}e^{\alpha_D}
+$$
 
 <div class="divider"></div>
 

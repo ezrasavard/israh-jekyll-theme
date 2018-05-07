@@ -28,7 +28,7 @@ main {
   font-family: $title-font;
   margin-top: 20px;
   font-size: 36px;
-  line-height: 32px;
+  line-height: 40px;
   font-weight: 400;
 }
 
@@ -85,14 +85,17 @@ blockquote {
 }
 
 code, pre {
+  overflow: auto;
   font-family: monospace;
 }
 
-pre {
-  overflow: auto;
+.highlighter-rouge, .rouge-table {
   border-left: 2px solid $dark-color;
   padding-left: 24px;
   margin: 32px 12px;
+  td {
+    border-top: none;
+  }
 }
 
 table {
@@ -145,6 +148,7 @@ img {
 
 h1 {
   font-size: 32px;
+  line-height: 32px;
   color: $dark-color;
   margin-top: 40px;
   margin-bottom: 30px;
