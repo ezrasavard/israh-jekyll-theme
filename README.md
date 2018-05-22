@@ -5,7 +5,7 @@ Israh is a responsive Jekyll theme with warm greys, a single column layout, and 
 This theme is an evolution of my [Ezora jekyll theme](https://github.com/ezrasavard/ezora-jekyll-theme) that reflects my own changing tastes.
 Most notably, Israh takes the focus off of header images so I don't have to find them for posts that don't need them.
 
-### [Try Israh](http://www.ezrasavard.com/israhdemo)
+### [Try Israh](https://ezrasavard.github.io/israh-jekyll-theme)
 
 Feel free to use this theme however you like (MIT License).
 
@@ -19,12 +19,7 @@ Feel free to use this theme however you like (MIT License).
 
 ## Installation
 
-In order to semi-modularize themes, I think the cleanest way to use this is to set this repository as a submodule in your own blog repository,
-and then use symlinks to point Jekyll to the correct folders within that directory.
-
-[My blog repo](https://github.com/ezrasavard/blog) can serve as an example for this layout.
-
-Some people may prefer to just fork this repository and add their own content, that's fine too =).
+Just fork this repository and add your own content =).
 
 ## Usage
 

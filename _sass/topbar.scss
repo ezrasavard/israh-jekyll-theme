@@ -1,8 +1,7 @@
 .topbar {
     max-width: $column_width;
-    position: relative;
     margin-top: 0px;
-    margin-bottom: 80px;
+    margin-bottom: 120px;
     margin-left: auto;
     margin-right: auto;
     @media (max-width: $column-width-trigger) {
@@ -10,41 +9,11 @@
       padding-left: $column-padding;
       padding-right: $column-padding;
     }
-    .top-left-graphics-box {
-      width: 35%;
-      height: 90px;
-      position: absolute;
-      z-index: 1;
-      top: 0px;
-      left: 0px;
-      border-left: 2px solid $dark-color;
-      border-top: 2px solid $dark-color;
-      @media (max-width: $column-width-trigger) {
-        left: $column-padding;
-      }
-    }
-    .bottom-right-graphics-box {
-      width: 12%;
-      height: 40px;
-      position: absolute;
-      z-index: 1;
-      bottom: 0px;
-      right: 0px;
-      border-right: 2px solid $dark-color;
-      border-bottom: 2px solid $dark-color;
-      @media (max-width: $column-width-trigger) {
-        right: $column-padding;
-      }
-    }
     .topbar-contents {
       padding-top: 24px;
-      padding-left: 24px;
-      padding-right: 24px;
+      padding-left: 0px;
+      padding-right: 0px;
       padding-bottom: 24px;
-    }
-    .title-box {
-      position: relative;
-      z-index: 2;
     }
     .title {
       &:hover,
@@ -56,31 +25,10 @@
       font-size: 64px;
       line-height: 56px;
     }
-    .subtitle-box {
-      transition-duration: .5s;
-      max-height: 500px;
-      padding-left: 12px;
-      padding-right: 12px;
-      @media (max-width: $column-width-trigger) {
-        max-height: 0;
-        margin-top: 0;
-        margin-bottom: 0;
-        overflow: hidden;
-      }
-      color: $light-color;
-      font-family: $page-subtitle-font;
-      font-size: 30px;
-      line-height: 32px;
-      margin-top: 48px;
-      margin-bottom: 48px;
-      text-align: center;
-    }
     nav {
-      position: relative;
-      z-index: 2;
       margin-top: 48px;
       font-size: 20px;
-      text-align: center;
+      text-align: left;
     }
     .navlink {
       color: $dark-color;

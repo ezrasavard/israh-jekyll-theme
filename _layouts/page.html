@@ -4,7 +4,11 @@ layout: default
 
 <article>
 
-    <div class=pagetitle>{{ page.title }}</div>
+    {% if page.top-text %}
+        <div class=pagetitle>{{ page.top-text }}</div>
+    {% else %}
+        <div class=pagetitle>{{ page.title }}</div>
+    {% endif %}
 
     {{ content }}
     

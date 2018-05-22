@@ -24,9 +24,9 @@ navlinks:
 
 # Build settings
 paginate: 3
-baseurl: "/israhdemo" # the subpath of your site, e.g. /blog/
+baseurl: "/israh-jekyll-theme" # the subpath of your site, e.g. /blog/
 #baseurl: ""
-url: "http://www.ezrasavard.com" # the base hostname & protocol for your site
+url: "https://ezrasavard.github.io" # the base hostname & protocol for your site
 highlights: pygments
 permalink: posts/:title/
 include: ["_pages"]
@@ -56,8 +56,4 @@ defaults:
         values:
             author: "Ezra Savard"
             layout: "page"
-    -
-        scope:
-            path: ""
-        values:
-            show-subtitle: false
+

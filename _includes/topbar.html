@@ -1,9 +1,6 @@
 <div class=topbar>
     <div class=topbar-contents>
-        <div class=title-box><a class=title href="{{ site.baseurl }}/">{{ site.greeting }}</a></div>
-        {% if page.show-subtitle == true %}
-            <div class=subtitle-box>{{ site.description }}</div>
-        {% endif %}
+        <a class=title href="{{ site.baseurl }}/">{{ site.greeting }}</a>
         <nav>
             {% for x in site.navlinks %}
                 {% if forloop.first == false %}
@@ -17,6 +14,4 @@
             {% endfor %}
         </nav>
     </div>
-    <div class=top-left-graphics-box></div>
-    <div class=bottom-right-graphics-box></div>
 </div>
